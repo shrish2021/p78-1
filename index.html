@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body>
+        <center>
+            <h1 id="titleFamily" style="font-size: 300%">
+                   Family Book
+        </h1>
+       <div>
+        <img src="https://thumbs.dreamstime.com/b/happy-family-parents-children-cute-cartoon-dad-mom-daughter-son-baby-happy-family-parents-children-cute-cartoon-170297353.jpg" 
+        id="imagesoffamily" style="width: 30%; margin-top: 50px;">
+  </div>
+  <div>
+        <button type="button" id="nextButton" onclick="update();" style="margin-top: 50px;">Next Page</button>
+        <h4 id="nameofperson" style="margin-top: 75px;">By: Shrish Adhikari</h4>
+    </div>
+         </center>
+    </body>
+</html>
+<script>
+    var images = ["https://thumbs.dreamstime.com/b/happy-family-parents-children-cute-cartoon-dad-mom-daughter-son-baby-happy-family-parents-children-cute-cartoon-170297353.jpg", 
+"https://image.shutterstock.com/image-vector/portrait-handsome-man-shirt-jeans-260nw-582282625.jpg", 
+"https://image.shutterstock.com/image-vector/working-mom-260nw-158801603.jpg", 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSljKbLgLKhNnQMQ-9X1NPDzQcy4cCpABX5GQ&usqp=CAU", 
+"http://learnenglishkids.britishcouncil.org/sites/kids/files/RS1675_Boy%20col-web.jpg"];
+
+var names = ["By: Shrish Adhikari", "Dhruba Adhikari (My dad)", "Binu Adhikari (My mom)", "Shreya Adhikari (My sister)", "Shrish Adhikari (Me, the brother)"];
+
+var i = 0;
+function update() {
+    i++;
+    var number_of_family_members_in_array = 4
+    if(i > number_of_family_members_in_array ) {
+        i = 0;
+    }
+
+    var updatedImage = images[i];
+    var updatedName = names[i];
+    document.getElementById("imagesoffamily").src = updatedImage;
+    document.getElementById("nameofperson").innerHTML = updatedName;
+}
+</script>
